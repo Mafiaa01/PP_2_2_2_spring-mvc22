@@ -16,6 +16,7 @@ public class PeopleController {
     public void setUserDAO(UserDAO userDAO) {
         this.userDAO = userDAO;
     }
+
     @GetMapping(value = "users")
     public String allUsers(Model model) {
         model.addAttribute("users", userDAO.getAllUsers());
